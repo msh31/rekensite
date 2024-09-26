@@ -14,7 +14,7 @@ function nieuw() {
     } else {
         let randomNumber = Math.floor(Math.random() * 7);
         //console.log("Random Number: " + randomNumber);
-        unitIdentity..innerHTML = units[randomNumber] + "<sup>" + dimvalue + "</sup>";
+        unitIdentity.innerHTML = units[randomNumber] + "<sup>" + dimvalue + "</sup>";
     }
 }
 

@@ -6,6 +6,8 @@ let answerField = document.getElementById("answerField");
 let unitIdentifier = document.getElementById("unitIdentifier");
 let answerUnitIdentifier = document.getElementById("answerUnitIdentifier");
 
+let calculatedAnswer;
+
 function nieuw() {
     answerField.value = "";
     let dimvalue = selectionMenu.value;
@@ -25,14 +27,17 @@ function nieuw() {
     inputField.value = inputFieldDecimal;
 
     let totalFactor = Math.pow(Math.pow(10, dimvalue), Math.abs(randomNumber - secondRandomNumber));
-    let calculatedAnswer;
+    
 
-    if(randomnmbr < randomnmbr2) { calculatedAnswer = inputFieldDecimal / totalFactor; }
+    if(randomNumber < secondRandomNumber) { calculatedAnswer = inputFieldDecimal / totalFactor; }
     else { calculatedAnswer = inputFieldDecimal * totalFactor; }
 
     alert("het juiste antwoord moet zijn: " + calculatedAnswer); //huh
 }
 
 function check() {
-    alert("hi!");
+    if(calculatedAnswer == answerField.value)
+        alert("goed");
+    else
+        alert("fout");
 }

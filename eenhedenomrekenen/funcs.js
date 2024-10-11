@@ -27,7 +27,6 @@ function nieuw() {
     inputField.value = inputFieldDecimal;
 
     let totalFactor = Math.pow(Math.pow(10, dimvalue), Math.abs(randomNumber - secondRandomNumber));
-    
 
     if(randomNumber < secondRandomNumber) { calculatedAnswer = inputFieldDecimal / totalFactor; }
     else { calculatedAnswer = inputFieldDecimal * totalFactor; }

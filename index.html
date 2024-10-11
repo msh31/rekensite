@@ -4,42 +4,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/home.css" rel="stylesheet">
-  <title> Marco's Rekentool </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title> Marco's Rekensite </title>
 </head>
 
-<body>
-<!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Container -->
-  <div class="container">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Marco's Rekensite</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="eenhedenomrekenen/">Eenheden</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Procenten</a>
-            </li>
-            <li class="nav-item"></li>
-            <a class="nav-link" href="#">Verhoudingen</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <h1 class="topText">hallo en welkom bij mijn rekensite</h1>
-    <h6>Deze website is gemaakt door Marco</h6>
-    <img src="img/rekenboom.png" alt="" class="rekenboom">
+<body class="bg-slate-300 flex flex-col justify-between h-screen" id="body">
+  <div class="flex justify-end p-4">
+      <button class="ml-4 bg-white text-black font-bold py-2 px-4 rounded shadow-lg" onclick="toggleDarkMode()">
+          <i id="darkModeIcon" class="fas fa-moon"></i>
+      </button>
   </div>
-</body>
+  <div class="flex flex-col items-start justify-center flex-grow ml-16 mt-4">
+      <h1 class="text-5xl font-bold mb-4">Welkom op mijn rekensite</h1>
+      <p class="text-lg mb-8 leading-relaxed">
+          Hey daar! Welkom op mijn rekensite. Wil jij beter worden in rekenen?<br>
+          Kijk dan niet verder, op mijn website vindt je allerlei verschillende apps<br>
+          om je te helpen met rekenen! Veel plezier met het oefenen!
+      </p>
+      <a href="eenhedenomrekenen/index.html">
+        <button class="bg-white text-black font-bold py-4 px-8 rounded shadow-lg animate-button">Start met oefenen</button>
+      </a>
+  </div>
+  <footer class="bg-white text-center py-2 text-gray-600">
+      Gemaakt met Tailwind & Bootstrap door Marco H.
+  </footer>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="mainFuncs.js"></script>
 
 </html>
+
+<!-- <body>
+  <header>
+
+  </header>
+
+  <main>
+    <div class="gallery">
+      <img src="https://afbeelding.dvhn.nl/dvhn/groningen/poa6ry-B881215657Z.1_20180613090113_000GPEV3LN9.1-0.jpg/alternates/LANDSCAPE_1920/B881215657Z.1_20180613090113_000%2BGPEV3LN9.1-0.jpg" alt="a hot air balloon">
+      <img src="https://i.pinimg.com/280x280_RS/d0/1b/ac/d01bacc1d07150ff5664ec974e486317.jpg" alt="a hot air balloon">
+      <img src="https://i.pinimg.com/564x/8c/f6/b0/8cf6b01e7f02e2befa711da2c9030f36.jpg" alt="a hot air balloon" href="">
+      <img src="overwrite.jpg"a hot air balloon">
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="mainFuncs.js"></script>
+</body> -->

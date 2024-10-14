@@ -14,7 +14,6 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     body.classList.toggle('bg-gray-800');
     body.classList.toggle('dark-mode'); 
   
-    // Update the icon based on the background color:
     if (body.classList.contains('bg-gray-800')) {
       icon.classList.remove('fa-moon');
       icon.classList.add('fa-sun');

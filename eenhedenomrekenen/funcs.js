@@ -38,13 +38,23 @@ const alertPlaceholder = document.getElementById('alertPlaceholder')
 const appendAlert = (message, type) => {
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
-        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
         `   <div>${message}</div>`,
         '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
         '</div>'
     ].join('')
 
     alertPlaceholder.append(wrapper)
+
+    setTimeout(() => {
+        const alert = wrapper.querySelector('.alert')
+        alert.classList.remove('show')
+        alert.classList.add('fade')
+
+        setTimeout(() => {
+            wrapper.remove()
+        }, 500)
+    }, 2000)
 }
 
 //fix an error when you input a decimal value using a comma
@@ -56,6 +66,10 @@ answerField.addEventListener('keypress', function (event) {
 });
 
 function check() {
-    if (calculatedAnswer == answerField.value) { appendAlert('Je hebt het goed!', 'success') }
-    else { appendAlert('Fout, het juiste antwoord is: ' + calculatedAnswer, 'danger') }
+    if(answerField.value != "") //fix undefined error
+    {
+        if (calculatedAnswer == answerField.value) { appendAlert('Je hebt het goed!', 'success') }
+        else { appendAlert('Fout, het juiste antwoord is: ' + calculatedAnswer, 'danger') }
+    }
+    else { appendAlert('Geen antwoord gegeven!', 'danger') }
 }

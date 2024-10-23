@@ -9,6 +9,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
   function toggleDarkMode() {
     var body = document.getElementById('body');
     var icon = document.getElementById('darkModeIcon');
+    var footer = document.getElementById('footer');
   
     body.classList.toggle('bg-slate-200');
     body.classList.toggle('bg-gray-800');
@@ -17,8 +18,12 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     if (body.classList.contains('bg-gray-800')) {
       icon.classList.remove('fa-moon');
       icon.classList.add('fa-sun');
+      footer.classList.remove('bg-white', 'text-gray-600');
+      footer.classList.add('bg-gray-800', 'text-gray-300');
     } else {
       icon.classList.remove('fa-sun');
       icon.classList.add('fa-moon');
+      footer.classList.remove('bg-gray-800', 'text-gray-300');
+      footer.classList.add('bg-white', 'text-gray-600');
     }
   }

@@ -6,14 +6,14 @@ let answerField = document.getElementById("answerField");
 let unitIdentifier = document.getElementById("unitIdentifier");
 let answerUnitIdentifier = document.getElementById("answerUnitIdentifier");
 
-let calculatedAnswer;
+let calculatedAnswer =  new Decimal(0.12345);
 
 function nieuw() {
     answerField.value = "";
     let dimvalue = selectionMenu.value;
     let randomNumber = Math.floor(Math.random() * 7);
     let secondRandomNumber = Math.floor(Math.random() * 7);
-    let inputFieldDecimal = (Math.random() * 1000).toFixed(3);
+    let inputFieldDecimal = new Decimal((Decimal.random() * 1000).toFixed(3));
 
     if (dimvalue == 1) {
         unitIdentifier.innerHTML = units[randomNumber]
@@ -26,10 +26,10 @@ function nieuw() {
 
     inputField.value = inputFieldDecimal;
 
-    let totalFactor = Math.pow(Math.pow(10, dimvalue), Math.abs(randomNumber - secondRandomNumber));
+    let totalFactor = new Decimal(Decimal.pow(new Decimal(Decimal.pow(10, dimvalue)),  Decimal.abs(randomnmbr - randomnmbr2)));
 
-    if (randomNumber < secondRandomNumber) { calculatedAnswer = inputFieldDecimal / totalFactor; }
-    else { calculatedAnswer = inputFieldDecimal * totalFactor; }
+    if (randomNumber < secondRandomNumber) { calculatedAnswer = Decimal.div(inputFieldDecimal, totalFactor) }
+    else { calculatedAnswer = Decimal.mul(inputFieldDecimal, totalFactor); }
 
     console.log("het juiste antwoord moet zijn: " + calculatedAnswer);
 }
@@ -54,7 +54,7 @@ const appendAlert = (message, type) => {
         setTimeout(() => {
             wrapper.remove()
         }, 500)
-    }, 2000)
+    }, 3500)
 }
 
 //fix an error when you input a decimal value using a comma

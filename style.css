@@ -28,6 +28,10 @@ body {
   color: #cbd5e0;
 }
 
+.card {
+  width: 90%; 
+  margin: auto; 
+}
 
 /* 
 .gallery {

@@ -15,7 +15,7 @@ function nieuw() {
     let secondRandomNumber = Math.floor(Math.random() * 7);
     let inputFieldDecimal = new Decimal((Decimal.random() * 1000).toFixed(3));
 
-    if (dimvalue == 1) {
+    if (dimvalue === 1) {
         unitIdentifier.innerHTML = units[randomNumber]
         answerUnitIdentifier.innerHTML = units[secondRandomNumber]
     }

@@ -1,12 +1,11 @@
-# Reken website
-Simpele web-based opdracht voor het vak rekenen.
+# Rekensite
+Assignment project during arithmetic lessons
 ***
 
-## Doel
-Deze oefenapp helpt je met het oefenen van het metrieke stelsel in 1D (lengte), 2D (oppervlakte) en 3D (inhoud).
+## Goal
+This web app helps you understand the metric system in 1D (length), 2D (area) and 3D (volume).
 
-### Gemaakt met
-TailWind, Bootstrap, HTML, CSS & JavaScript
-
-#### How to build?
-``npm install tailwindcss@latest postcss@latest autoprefixer@latest``
+## Built with
+``FastBootstrap``
+&
+``Decimal.JS``

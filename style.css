@@ -1,3 +1,10 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
     justify-content: left;
     display: flex;
@@ -14,4 +21,12 @@
 
 .main-container {
     padding: 35px;
+    flex: 1; /* aallow to grow */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.introduction-text {
+    font-size: 3rem;
 }

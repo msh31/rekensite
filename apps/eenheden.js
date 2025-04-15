@@ -26,7 +26,7 @@ function nieuw() {
 
     inputField.value = inputFieldDecimal;
 
-    let totalFactor = new Decimal(Decimal.pow(new Decimal(Decimal.pow(10, dimvalue)),  Decimal.abs(randomnmbr - randomnmbr2)));
+    let totalFactor = new Decimal(Decimal.pow(new Decimal(Decimal.pow(10, dimvalue)), Decimal.abs(randomNumber - secondRandomNumber)));
 
     if (randomNumber < secondRandomNumber) { calculatedAnswer = Decimal.div(inputFieldDecimal, totalFactor) }
     else { calculatedAnswer = Decimal.mul(inputFieldDecimal, totalFactor); }
@@ -66,10 +66,13 @@ answerField.addEventListener('keypress', function (event) {
 });
 
 function check() {
-    if(answerField.value != "") //fix undefined error
-    {
-        if (calculatedAnswer == answerField.value) { appendAlert('Je hebt het goed!', 'success') }
-        else { appendAlert('Fout, het juiste antwoord is: ' + calculatedAnswer, 'danger') }
+    if(answerField.value !== "") {
+        if (calculatedAnswer.equals(new Decimal(answerField.value))) {
+            appendAlert('Je hebt het goed!', 'success')
+        } else {
+            appendAlert('Fout, het juiste antwoord is: ' + calculatedAnswer, 'danger')
+        }
+    } else {
+        appendAlert('Geen antwoord gegeven!', 'danger')
     }
-    else { appendAlert('Geen antwoord gegeven!', 'danger') }
 }
